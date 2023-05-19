@@ -1,7 +1,7 @@
 <?php
 session_start()
 
-  ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -136,18 +136,29 @@ session_start()
     p {
       text-align: center;
       margin-bottom: 20px;
-
+      text-overflow: inherit;
 
     }
+
+    .card_content p {
+      width: 100%;
+      overflow:hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+
+
 
     .card_content {
       text-align: center;
-      padding: 10px
-
+      padding: 10px;
+      width: 100%;
+     
 
     }
 
-   
+
     .bottom_section {
       display: flex
     }
@@ -229,6 +240,21 @@ session_start()
       .contact h2 {
         font-size: 10px;
       }
+    
+  @keyframes movingText {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .lg_text{
+    animation: movingText 5s linear infinite;
+  }
+
+
     }
   </style>
   <nav>
