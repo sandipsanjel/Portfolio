@@ -265,7 +265,7 @@ session_start()
       </li>
       <li><a href="#home">Home</a></li>
       <li><a href="#about-me">About Me</a></li>
-      <!-- <li><a href="list.php">List</a></li> -->
+      <li><a href="list.php">List</a></li>
       <li><a href="form.php">Contact Me</a></li>
       <li><a href="loginform.php">Login</a></li>
       <li><a href="registerpro.php">Register</a></li>
