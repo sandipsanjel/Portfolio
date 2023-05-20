@@ -9,7 +9,7 @@ session_start()
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Developer|Landing page</title>
+  <title>Portfolio-sandip</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap');
 
@@ -92,7 +92,7 @@ session_start()
 
     .black_box h2 {
       font-size: 40px;
-      color: white;
+      color: black;
       text-align: center;
       font-weight: 300;
     }
@@ -260,16 +260,21 @@ session_start()
   <nav>
     <ul>
       <li>
-        Loged in User : (
-        <?php echo $_SESSION["sun"]; ?>)
+         User Name : 
+        <?php  echo $_SESSION["sun"]; ?>
       </li>
       <li><a href="#home">Home</a></li>
       <li><a href="#about-me">About Me</a></li>
-      <li><a href="list.php">List</a></li>
       <li><a href="form.php">Contact Me</a></li>
-      <li><a href="loginform.php">Login</a></li>
+      <?php
+      //  if  ($sun ==='sandip'){
+      //   echo ""
+      //  }
+      ?>
+      <li><a href="list.php">List</a></li>
       <li><a href="registerpro.php">Register</a></li>
-      <li><a href="registerpro.php">Log OUt</a></li>
+      <li><a href="loginform.php">Login</a></li>
+      <li><a href="logout.php">Log OUt</a></li>
     </ul>
   </nav>
 

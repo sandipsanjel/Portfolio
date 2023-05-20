@@ -35,8 +35,8 @@ $sun = $_SESSION["sun"];
 
 <body>
 
-    <a href="registerpro.php">Add new login</a>
-    <a href="main.php">home</a>
+    <a href="registerpro.php "> | New Register |</a>
+    <a href="main.php">home |</a>
     <table class="table">
         <thead>
 
