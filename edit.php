@@ -1,6 +1,7 @@
 <?php
 include("conn.php"); //it contain code that connects to the database by including the files in current files code 
 $id = $_GET["id"]; //takes 'id' from url query using the $_GET superglobal arrary in php
+// echo $id;
 $sql = "select * from task  where id ='$id'";
 $query = mysqli_query($conn, $sql); //executes in sql using mysqli_query() function takes two '$args' conn and '#sql'
 $result = mysqli_fetch_array($query);
@@ -73,18 +74,17 @@ $result = mysqli_fetch_array($query);
         <form action="editpro.php" method="POST">
             <p>Welcome to the Register page:</p>
             <label>Name:</label>
-            <input type="hidden" name="id" value="<?php echo $result["id"]; ?>">
-
-            <input type="text" name="Name" value="<?php echo $result["Name"]; ?>">
+            <input type="hidden" name="id" id="id" value="<?php echo $result["id"]; ?>">
+            <input type="text" name="name"id="name" value="<?php echo $result["Name"]; ?>">
 
             <label>Email:</label>
-            <input type="text" name="Email" value="<?php echo $result["Email"]; ?>">
+            <input type="text" name="email"  id="email"value="<?php echo $result["Email"]; ?>">
 
             <label>Password:</label>
-            <input type="password" name="Password" value="<?php echo $result["Password"]; ?>">
+            <input type="password" name="password" id="password" value="<?php echo $result["Password"]; ?>">
 
             <label>Confirm Password:</label>
-            <input type="password" name="ConfirmPassword" value="<?php echo $result["ConfirmPassword"]; ?>">
+            <input type="password" name="confirmpassword" id="confirmpassword" value="<?php echo $result["ConfirmPassword"]; ?>">
 
             <input type="submit" name="submit" value="Submit">
         </form>

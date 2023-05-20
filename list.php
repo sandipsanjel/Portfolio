@@ -1,4 +1,7 @@
 <?php
+
+include("conn.php");
+
 session_start();
 $sun = $_SESSION["sun"];
 ?>
@@ -31,11 +34,18 @@ $sun = $_SESSION["sun"];
 </head>
 
 <body>
+
+    <a href="registerpro.php">Add new login</a>
+    <a href="main.php">home</a>
     <table class="table">
         <thead>
+
+
+
             <tr>
                 <th colspan="6" class="text-center">Total logins</th>
             </tr>
+
             <tr>
                 <th>SN</th>
                 <th>Name</th>
@@ -48,11 +58,10 @@ $sun = $_SESSION["sun"];
         <tbody>
             <?php
             $c = 1;
-            include("conn.php");
             $sql = "SELECT * FROM task";
             $qry = mysqli_query($conn, $sql);
             while ($r = mysqli_fetch_array($qry)) {
-                ?>
+            ?>
                 <tr>
                     <td><?php echo $c; ?></td>
                     <td><?php echo $r["Name"]; ?></td>
@@ -61,10 +70,10 @@ $sun = $_SESSION["sun"];
                     <td><?php echo $r["ConfirmPassword"]; ?></td>
                     <td>
                         <?php
-                        if ($sun === 'sandip'   ) {
+                        if ($sun === 'sandip') {
                             // Only allow admin user 'sandip' with role 'admin' to perform update and delete operations
-                            echo "<a href='edit.php?id=".$r['id']."'>Edit</a> | ";
-                            echo "<a href='del.php?id=".$r['id']."'>Delete</a>";
+                            echo "<a href='edit.php?id=" . $r['id'] . "'>Edit</a> | ";
+                            echo "<a href='del.php?id=" . $r['id'] . "'>Delete</a>";
                         } else {
                             // Display a message for regular users or unauthorized users
                             echo "Restricted";

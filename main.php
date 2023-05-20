@@ -269,6 +269,7 @@ session_start()
       <li><a href="form.php">Contact Me</a></li>
       <li><a href="loginform.php">Login</a></li>
       <li><a href="registerpro.php">Register</a></li>
+      <li><a href="registerpro.php">Log OUt</a></li>
     </ul>
   </nav>
 
