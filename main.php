@@ -9,7 +9,7 @@ session_start()
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio-sandip</title>
+  <title>Landing-page</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap');
 
@@ -282,7 +282,7 @@ session_start()
   <section id="home">
     <section class="hero_section">
       <div class="text_container">
-        <h2><span class="lg_text">HI..</span> I am Sandip sanjel</h2>
+        <h2><span class="lg_text">HI..</span> I am .......</h2>
         <h1 class="lg_text">FULL-STACK DEVELOPER</h1>
       </div>
     </section>
